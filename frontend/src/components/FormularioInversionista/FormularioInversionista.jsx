@@ -132,17 +132,22 @@ const FormularioInversionista = forwardRef(({
 					))}
 				</select>
 			</div>
-			<div style={{ marginBottom: 12 }}>
-				<label>
-					<input
-						ref={estadoRef}
-						type="checkbox"
-						name="estado"
-						checked={estadoSeleccionado}
-						onChange={(event) => setEstadoSeleccionado(event.target.checked)}
-					/> Activo
-				</label>
-			</div>
+			{
+				valoresIniciales.id && (
+					<div style={{ marginBottom: 12 }}>
+						<label>
+							<input
+								ref={estadoRef}
+								type="checkbox"
+								name="estado"
+								checked={estadoSeleccionado}
+								onChange={(event) => setEstadoSeleccionado(event.target.checked)}
+							/> Activo
+						</label>
+					</div>
+				)
+			}
+
 		</form>
 	);
 });
