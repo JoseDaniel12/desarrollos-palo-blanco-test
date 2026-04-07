@@ -189,6 +189,11 @@ const Dashboard = () => {
 									<button onClick={() => navigate(`/inversionistas/${inversionista.id}/editar`)}>
 										Editar
 									</button>
+									<button
+										onClick={() => navigate(`/inversionistas/${inversionista.id}`)}
+									>
+										Ver
+									</button>
 								</td>
 							</tr>
 						))}
