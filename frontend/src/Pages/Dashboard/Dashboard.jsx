@@ -161,6 +161,7 @@ const Dashboard = () => {
 							<th>Inversión</th>
 							<th>Categoría</th>
 							<th>Estado</th>
+							<th>Acciones</th>
 						</tr>
 					</thead>
 
@@ -183,7 +184,12 @@ const Dashboard = () => {
 								<td>{inversionista.email}</td>
 								<td>{formatearMoneda(inversionista.inversion)}</td>
 								<td>{inversionista.categoria_nombre || 'Sin categoría'}</td>
-								<td>{inversionista.estado}</td>
+								<td>{inversionista.estado ? 'Activo' : 'Inactivo'}</td>
+								<td>
+									<button onClick={() => navigate(`/inversionistas/${inversionista.id}/editar`)}>
+										Editar
+									</button>
+								</td>
 							</tr>
 						))}
 					</tbody>
